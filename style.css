@@ -1,0 +1,81 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.invitation {
+  width: 90%;
+  max-width: 500px;
+  background-color: #fffdf7;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.cover {
+  background-color: #ffe4e1;
+  padding: 40px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+.cover h1 {
+  color: #c0392b;
+}
+
+.content.hidden {
+  display: none;
+}
+
+h2, h3, h4 {
+  color: #b03a2e;
+}
+
+.map-section, .qr-section {
+  margin-top: 20px;
+}
+
+.thanks {
+  margin-top: 25px;
+  font-style: italic;
+  color: #333;
+}
+
+.rsvp button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f08080;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.rsvp button:hover {
+  background-color: #e74c3c;
+}
+
+.theme-switcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+}
+
+body.classic { background: linear-gradient(to right, #ffecd2, #fcb69f); }
+body.pink { background: linear-gradient(to right, #ffd6e0, #fff5f7); }
+body.dark { background: linear-gradient(to right, #2c3e50, #4ca1af); color: white; }
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thiệp Cưới - A & B</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio id="bgm" autoplay loop>
+    <source src="music/wedding.mp3" type="audio/mpeg" />
+    Trình duyệt của bạn không hỗ trợ âm thanh.
+  </audio>
+
+  <div class="invitation">
+    <div class="cover" onclick="openCard()">
+      <h1>💌 Thiệp Mời</h1>
+      <p>Bấm để mở thiệp</p>
+    </div>
+
+    <div class="content hidden" id="cardContent">
+      <h2>Trân trọng kính mời</h2>
+      <p>Ông/Bà: <strong id="guestName">[Tên khách mời]</strong></p>
+      <p>Đến dự lễ thành hôn của chúng tôi</p>
+      <h3>Chú rể: Nguyễn Văn A</h3>
+      <h3>Cô dâu: Trần Thị B</h3>
+      <p>⏰ 10h00, ngày 15 tháng 7 năm 2025</p>
+      <p>🏛️ Nhà hàng Hoa Sen, Quận 1, TP.HCM</p>
+
+      <div class="map-section">
+        <h4>📍 Bản đồ</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.442726906978!2d106.700424!3d10.776889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ec6f3a78b5f%3A0x2a7d774dbfe9f587!2zTmjDoCBow6BuZyBIb2EgU2Vu!5e0!3m2!1svi!2s!4v1234567890"
+          width="100%"
+          height="200"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="qr-section">
+        <p>📷 Quét mã để mở bản đồ</p>
+        <img src="images/qr-map.png" alt="QR Code" width="150" />
+      </div>
+
+      <p class="thanks">Sự hiện diện của quý vị là niềm vinh hạnh của gia đình chúng tôi.</p>
+
+      <div class="rsvp">
+        <p>🎉 Bạn có thể tham dự chứ?</p>
+        <button onclick="respond('yes')">✅ Có</button>
+        <button onclick="respond('no')">❌ Không</button>
+        <p id="responseMsg"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="theme-switcher">
+    <label>🎨 Chọn chủ đề:
+      <select onchange="changeTheme(this.value)">
+        <option value="classic">Cổ điển</option>
+        <option value="pink">Hồng nhẹ</option>
+        <option value="dark">Tối sang trọng</option>
+      </select>
+    </label>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
